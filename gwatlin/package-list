@@ -192,6 +192,15 @@ $dokka.location:io.github.kryszak.gwatlin.api.achievement/GWAchievementsClient/g
 $dokka.location:io.github.kryszak.gwatlin.api.achievement/GWAchievementsClient/getAchievementsByIds/#kotlin.collections.List[kotlin.Int]/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.achievement/-g-w-achievements-client/get-achievements-by-ids.html
 $dokka.location:io.github.kryszak.gwatlin.api.achievement/GWAchievementsClient/getDailyAchievements/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.achievement/-g-w-achievements-client/get-daily-achievements.html
 $dokka.location:io.github.kryszak.gwatlin.api.achievement/GWAchievementsClient/getDailyTomorrowAchievements/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.achievement/-g-w-achievements-client/get-daily-tomorrow-achievements.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo.model////PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/index.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo.model/SchemaVersion///PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/-schema-version/index.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo.model/SchemaVersion/SchemaVersion/#kotlin.String#kotlin.String/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/-schema-version/-schema-version.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo.model/SchemaVersion/description/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/-schema-version/description.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo.model/SchemaVersion/version/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/-schema-version/version.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo////PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo/index.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo/GWApiInfoClient///PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo/-g-w-api-info-client/index.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo/GWApiInfoClient/GWApiInfoClient/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo/-g-w-api-info-client/-g-w-api-info-client.html
+$dokka.location:io.github.kryszak.gwatlin.api.apiinfo/GWApiInfoClient/getAchievementIdsList/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.apiinfo/-g-w-api-info-client/get-achievement-ids-list.html
 $dokka.location:io.github.kryszak.gwatlin.api.characters.model.character.equipment////PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.equipment/index.html
 $dokka.location:io.github.kryszak.gwatlin.api.characters.model.character.equipment/EquipmentItem///PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.equipment/-equipment-item/index.html
 $dokka.location:io.github.kryszak.gwatlin.api.characters.model.character.equipment/EquipmentItem/EquipmentItem/#kotlin.Int#io.github.kryszak.gwatlin.api.shared.ItemSlot?#io.github.kryszak.gwatlin.api.shared.ItemBinding?#kotlin.String?#kotlin.collections.List[kotlin.Int]#io.github.kryszak.gwatlin.api.characters.model.character.equipment.EquipmentItemLocation#kotlin.Int?#kotlin.collections.List[kotlin.Int]#io.github.kryszak.gwatlin.api.characters.model.character.ItemStats?#kotlin.collections.List[kotlin.Int?]#kotlin.Int?#kotlin.collections.Set[kotlin.Int]#kotlin.Int?/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.equipment/-equipment-item/-equipment-item.html
@@ -2344,6 +2353,8 @@ io.github.kryszak.gwatlin.api.achievement.model
 io.github.kryszak.gwatlin.api.achievement.model.category
 io.github.kryszak.gwatlin.api.achievement.model.daily
 io.github.kryszak.gwatlin.api.achievement.model.group
+io.github.kryszak.gwatlin.api.apiinfo
+io.github.kryszak.gwatlin.api.apiinfo.model
 io.github.kryszak.gwatlin.api.characters
 io.github.kryszak.gwatlin.api.characters.model
 io.github.kryszak.gwatlin.api.characters.model.character
