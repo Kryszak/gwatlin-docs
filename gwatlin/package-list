@@ -1086,7 +1086,7 @@ $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/GuildUpgrade/p
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/GuildUpgrade/requiredLevel/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-guild-upgrade/required-level.html
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/GuildUpgrade/type/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-guild-upgrade/type.html
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost///PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/index.html
-$dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost/UpgradeCost/#kotlin.String#kotlin.String#kotlin.Int#kotlin.Int?/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/-upgrade-cost.html
+$dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost/UpgradeCost/#kotlin.String#kotlin.String?#kotlin.Int#kotlin.Int?/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/-upgrade-cost.html
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost/count/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/count.html
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost/itemId/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/item-id.html
 $dokka.location:io.github.kryszak.gwatlin.api.guild.model.upgrade/UpgradeCost/name/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/-upgrade-cost/name.html
