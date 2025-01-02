@@ -26,55 +26,98 @@
 <link href="styles/prism.css" rel="Stylesheet">
 <link href="styles/logo-styles.css" rel="Stylesheet">
 <link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
 <script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
 <script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
 <script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
     <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-                    <a class="library-name--link" href="index.html">
-                            gwatlin
-                    </a>
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="index.html">
+                    gwatlin
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+2.2.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main"
+                                       data-filter=":/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div class="library-version">
-2.2.0            </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":dokkaHtml/main">jvm</button>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
         </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
+    </nav>
         <div id="container">
             <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    gwatlin
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
             </div>
             <div id="main">
-<div class="main-content" id="content" pageIds="gwatlin::////PointingToDeclaration//769193423">
+<div class="main-content" id="content" pageIds="gwatlin::////PointingToDeclaration//-251573632">
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>gwatlin</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":dokkaHtml/main"><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Client without API KEY<br>val wvwClient = GWWvwClient()<br>val wvwRank = wvwClient.getRanks(listOf(1))<br>println(wvwRank)<br>// WvwRank(id=1, minRank=1, title=Invader)<br><br>// Client with API KEY<br>val tokenInfoClient = GWTokenClient(&quot;API KEY here&quot;)<br>val tokenInfo = tokenInfoClient.getTokenInfo()<br>println(tokenInfo)<br>// Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Client without API KEY<br>val wvwClient = GWWvwClient()<br>val wvwRank = wvwClient.getRanks(listOf(1))<br>println(wvwRank)<br>// WvwRank(id=1, minRank=1, title=Invader)<br><br>// Client with API KEY<br>val tokenInfoClient = GWTokenClient(&quot;API KEY here&quot;)<br>val tokenInfo = tokenInfoClient.getTokenInfo()<br>println(tokenInfo)<br>// Token(id=ABCDE02B-8888-FEBA-1234-DE98765C7DEF, name=My API Key, permissions=[account, characters, tradingpost, unlocks, build], type=null, expiresAt=null, issuedAt=null, urls=null)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="784280110%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api" id="784280110%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+  <div class="table"><a data-name="784280110%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api" id="784280110%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api/index.html">io.github.kryszak.gwatlin.api</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="784280110%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="784280110%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -86,13 +129,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="838817709%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.account" id="838817709%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="838817709%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.account" id="838817709%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.account/index.html">io.github.kryszak.gwatlin.api.account</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838817709%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838817709%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -104,13 +147,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-393136280%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.account.model" id="-393136280%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-393136280%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.account.model" id="-393136280%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.account.model/index.html">io.github.kryszak.gwatlin.api.account.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-393136280%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-393136280%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -122,13 +165,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="2138628753%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.account.model.mastery" id="2138628753%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2138628753%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.account.model.mastery" id="2138628753%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.account.model.mastery/index.html">io.github.kryszak.gwatlin.api.account.model.mastery</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138628753%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138628753%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -140,13 +183,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1317491540%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.account.model.vault" id="-1317491540%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1317491540%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.account.model.vault" id="-1317491540%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.account.model.vault/index.html">io.github.kryszak.gwatlin.api.account.model.vault</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1317491540%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1317491540%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -158,13 +201,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="840146735%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.achievement" id="840146735%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="840146735%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.achievement" id="840146735%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.achievement/index.html">io.github.kryszak.gwatlin.api.achievement</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840146735%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840146735%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -176,13 +219,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1090409834%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.achievement.model" id="1090409834%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1090409834%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.achievement.model" id="1090409834%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.achievement.model/index.html">io.github.kryszak.gwatlin.api.achievement.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1090409834%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1090409834%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -194,13 +237,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1349827194%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.category" id="-1349827194%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1349827194%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.category" id="-1349827194%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.achievement.model.category/index.html">io.github.kryszak.gwatlin.api.achievement.model.category</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1349827194%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1349827194%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -212,13 +255,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1599883861%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.daily" id="1599883861%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1599883861%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.daily" id="1599883861%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.achievement.model.daily/index.html">io.github.kryszak.gwatlin.api.achievement.model.daily</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1599883861%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1599883861%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -230,13 +273,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="351080251%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.group" id="351080251%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="351080251%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.achievement.model.group" id="351080251%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.achievement.model.group/index.html">io.github.kryszak.gwatlin.api.achievement.model.group</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="351080251%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="351080251%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -248,13 +291,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-812747896%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.apiinfo" id="-812747896%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-812747896%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.apiinfo" id="-812747896%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.apiinfo/index.html">io.github.kryszak.gwatlin.api.apiinfo</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-812747896%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-812747896%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -266,13 +309,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1746191107%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.apiinfo.model" id="1746191107%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1746191107%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.apiinfo.model" id="1746191107%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.apiinfo.model/index.html">io.github.kryszak.gwatlin.api.apiinfo.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1746191107%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1746191107%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -284,13 +327,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="685677358%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters" id="685677358%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="685677358%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters" id="685677358%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters/index.html">io.github.kryszak.gwatlin.api.characters</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="685677358%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="685677358%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -302,13 +345,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-441051607%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters.model" id="-441051607%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-441051607%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters.model" id="-441051607%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters.model/index.html">io.github.kryszak.gwatlin.api.characters.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-441051607%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-441051607%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -320,13 +363,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="70988900%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character" id="70988900%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="70988900%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character" id="70988900%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters.model.character/index.html">io.github.kryszak.gwatlin.api.characters.model.character</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="70988900%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="70988900%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -338,13 +381,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1540311812%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.equipment" id="1540311812%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1540311812%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.equipment" id="1540311812%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.equipment/index.html">io.github.kryszak.gwatlin.api.characters.model.character.equipment</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1540311812%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1540311812%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -356,13 +399,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-154584750%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.inventory" id="-154584750%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-154584750%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.inventory" id="-154584750%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.inventory/index.html">io.github.kryszak.gwatlin.api.characters.model.character.inventory</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-154584750%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-154584750%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -374,13 +417,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1396419382%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.sab" id="-1396419382%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1396419382%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.characters.model.character.sab" id="-1396419382%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.characters.model.character.sab/index.html">io.github.kryszak.gwatlin.api.characters.model.character.sab</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1396419382%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1396419382%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -392,13 +435,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-948571937%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.commerce" id="-948571937%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-948571937%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.commerce" id="-948571937%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.commerce/index.html">io.github.kryszak.gwatlin.api.commerce</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-948571937%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-948571937%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -410,13 +453,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1595909445%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.exchange" id="-1595909445%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1595909445%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.exchange" id="-1595909445%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.commerce.model.exchange/index.html">io.github.kryszak.gwatlin.api.commerce.model.exchange</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1595909445%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1595909445%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -428,13 +471,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1682110928%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.listing" id="-1682110928%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1682110928%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.listing" id="-1682110928%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.commerce.model.listing/index.html">io.github.kryszak.gwatlin.api.commerce.model.listing</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1682110928%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1682110928%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -446,13 +489,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1972620085%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.price" id="1972620085%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1972620085%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.commerce.model.price" id="1972620085%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.commerce.model.price/index.html">io.github.kryszak.gwatlin.api.commerce.model.price</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1972620085%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1972620085%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -464,13 +507,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1568986129%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.dailyrewards" id="-1568986129%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1568986129%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.dailyrewards" id="-1568986129%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.dailyrewards/index.html">io.github.kryszak.gwatlin.api.dailyrewards</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1568986129%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1568986129%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -482,13 +525,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-823191601%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.exception" id="-823191601%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-823191601%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.exception" id="-823191601%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.exception/index.html">io.github.kryszak.gwatlin.api.exception</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-823191601%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-823191601%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -500,13 +543,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1152532291%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics" id="-1152532291%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1152532291%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics" id="-1152532291%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics/index.html">io.github.kryszak.gwatlin.api.gamemechanics</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152532291%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1152532291%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -518,13 +561,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1924043473%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.facts" id="1924043473%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1924043473%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.facts" id="1924043473%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.facts/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.facts</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924043473%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1924043473%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -536,13 +579,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1508888953%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.legend" id="-1508888953%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1508888953%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.legend" id="-1508888953%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.legend/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.legend</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508888953%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508888953%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -554,13 +597,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1150431137%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mastery" id="1150431137%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1150431137%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mastery" id="1150431137%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.mastery/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.mastery</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1150431137%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1150431137%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -572,13 +615,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="686421100%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin" id="686421100%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="686421100%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin" id="686421100%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.mount.skin</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="686421100%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="686421100%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -590,13 +633,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-36520983%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type" id="-36520983%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-36520983%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type" id="-36520983%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.mount.type</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-36520983%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-36520983%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -608,13 +651,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1606552323%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.outfit" id="-1606552323%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1606552323%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.outfit" id="-1606552323%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.outfit/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.outfit</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1606552323%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1606552323%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -626,13 +669,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-888461207%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.pet" id="-888461207%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-888461207%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.pet" id="-888461207%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.pet/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.pet</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-888461207%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-888461207%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -644,13 +687,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1457914550%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.profession" id="1457914550%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1457914550%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.profession" id="1457914550%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.profession/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.profession</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457914550%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457914550%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -662,13 +705,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1994662325%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.race" id="-1994662325%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1994662325%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.race" id="-1994662325%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.race/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.race</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1994662325%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1994662325%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -680,13 +723,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1767841051%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.skill" id="1767841051%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1767841051%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.skill" id="1767841051%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.skill/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.skill</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1767841051%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1767841051%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -698,13 +741,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-2106146171%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.specialization" id="-2106146171%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2106146171%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.specialization" id="-2106146171%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.specialization/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.specialization</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2106146171%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2106146171%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -716,13 +759,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="815194776%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.trait" id="815194776%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="815194776%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.gamemechanics.model.trait" id="815194776%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.gamemechanics.model.trait/index.html">io.github.kryszak.gwatlin.api.gamemechanics.model.trait</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="815194776%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="815194776%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -734,13 +777,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1090200205%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild" id="-1090200205%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1090200205%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild" id="-1090200205%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild/index.html">io.github.kryszak.gwatlin.api.guild</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1090200205%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1090200205%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -752,13 +795,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1689309358%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model" id="1689309358%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1689309358%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model" id="1689309358%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model/index.html">io.github.kryszak.gwatlin.api.guild.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1689309358%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1689309358%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -770,13 +813,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="297313886%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.emblem" id="297313886%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="297313886%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.emblem" id="297313886%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.emblem/index.html">io.github.kryszak.gwatlin.api.guild.model.emblem</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="297313886%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="297313886%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -788,13 +831,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1913440380%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.log" id="-1913440380%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1913440380%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.log" id="-1913440380%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.log/index.html">io.github.kryszak.gwatlin.api.guild.model.log</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1913440380%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1913440380%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -806,13 +849,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="478534611%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.permission" id="478534611%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="478534611%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.permission" id="478534611%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.permission/index.html">io.github.kryszak.gwatlin.api.guild.model.permission</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="478534611%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="478534611%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -824,13 +867,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-461853195%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.stash" id="-461853195%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-461853195%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.stash" id="-461853195%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.stash/index.html">io.github.kryszak.gwatlin.api.guild.model.stash</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461853195%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461853195%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -842,13 +885,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1390818401%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.team" id="1390818401%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1390818401%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.team" id="1390818401%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.team/index.html">io.github.kryszak.gwatlin.api.guild.model.team</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390818401%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390818401%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -860,13 +903,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-588955577%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.treasury" id="-588955577%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-588955577%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.treasury" id="-588955577%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.treasury/index.html">io.github.kryszak.gwatlin.api.guild.model.treasury</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588955577%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588955577%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -878,13 +921,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="2146529628%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.guild.model.upgrade" id="2146529628%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2146529628%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.guild.model.upgrade" id="2146529628%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.guild.model.upgrade/index.html">io.github.kryszak.gwatlin.api.guild.model.upgrade</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2146529628%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2146529628%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -896,13 +939,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-300858824%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.homeinstance" id="-300858824%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-300858824%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.homeinstance" id="-300858824%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.homeinstance/index.html">io.github.kryszak.gwatlin.api.homeinstance</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-300858824%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-300858824%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -914,13 +957,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1089614413%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.homeinstance.model" id="-1089614413%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1089614413%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.homeinstance.model" id="-1089614413%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.homeinstance.model/index.html">io.github.kryszak.gwatlin.api.homeinstance.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1089614413%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1089614413%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -932,13 +975,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1887751424%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items" id="-1887751424%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1887751424%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items" id="-1887751424%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items/index.html">io.github.kryszak.gwatlin.api.items</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1887751424%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1887751424%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -950,13 +993,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-982238569%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.finisher" id="-982238569%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-982238569%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.finisher" id="-982238569%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.finisher/index.html">io.github.kryszak.gwatlin.api.items.model.finisher</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-982238569%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-982238569%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -968,13 +1011,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="486012394%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.item" id="486012394%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="486012394%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.item" id="486012394%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.item/index.html">io.github.kryszak.gwatlin.api.items.model.item</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486012394%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486012394%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -986,13 +1029,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1837878398%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.material" id="1837878398%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1837878398%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.material" id="1837878398%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.material/index.html">io.github.kryszak.gwatlin.api.items.model.material</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1837878398%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1837878398%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1004,13 +1047,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1264193613%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.pvp.amulet" id="1264193613%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1264193613%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.pvp.amulet" id="1264193613%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.pvp.amulet/index.html">io.github.kryszak.gwatlin.api.items.model.pvp.amulet</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1264193613%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1264193613%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1022,13 +1065,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1837546651%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.recipe" id="-1837546651%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1837546651%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.recipe" id="-1837546651%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.recipe/index.html">io.github.kryszak.gwatlin.api.items.model.recipe</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1837546651%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1837546651%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1040,13 +1083,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1709848861%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.skins" id="-1709848861%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1709848861%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.skins" id="-1709848861%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.skins/index.html">io.github.kryszak.gwatlin.api.items.model.skins</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1709848861%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1709848861%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1058,13 +1101,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-91301972%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.items.model.stats" id="-91301972%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-91301972%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.items.model.stats" id="-91301972%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.items.model.stats/index.html">io.github.kryszak.gwatlin.api.items.model.stats</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-91301972%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-91301972%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1076,13 +1119,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1295318858%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.mapinfo" id="1295318858%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1295318858%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.mapinfo" id="1295318858%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.mapinfo/index.html">io.github.kryszak.gwatlin.api.mapinfo</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1295318858%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1295318858%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1094,13 +1137,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1444940475%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.mapinfo.model" id="-1444940475%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1444940475%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.mapinfo.model" id="-1444940475%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.mapinfo.model/index.html">io.github.kryszak.gwatlin.api.mapinfo.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1444940475%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1444940475%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1112,13 +1155,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="570897326%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous" id="570897326%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="570897326%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous" id="570897326%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.miscellaneous/index.html">io.github.kryszak.gwatlin.api.miscellaneous</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="570897326%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="570897326%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1130,13 +1173,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-2027270487%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model" id="-2027270487%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2027270487%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model" id="-2027270487%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.miscellaneous.model/index.html">io.github.kryszak.gwatlin.api.miscellaneous.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2027270487%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2027270487%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1148,13 +1191,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1085931234%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.color" id="-1085931234%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1085931234%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.color" id="-1085931234%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.miscellaneous.model.color/index.html">io.github.kryszak.gwatlin.api.miscellaneous.model.color</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1085931234%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1085931234%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1166,13 +1209,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1118102667%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.dungeon" id="-1118102667%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1118102667%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.dungeon" id="-1118102667%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.miscellaneous.model.dungeon/index.html">io.github.kryszak.gwatlin.api.miscellaneous.model.dungeon</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1118102667%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1118102667%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1184,13 +1227,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1439107533%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.raid" id="-1439107533%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1439107533%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.miscellaneous.model.raid" id="-1439107533%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.miscellaneous.model.raid/index.html">io.github.kryszak.gwatlin.api.miscellaneous.model.raid</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1439107533%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1439107533%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1202,13 +1245,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-855036566%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.pvp" id="-855036566%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-855036566%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.pvp" id="-855036566%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.pvp/index.html">io.github.kryszak.gwatlin.api.pvp</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-855036566%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-855036566%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1220,13 +1263,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="705731935%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.game" id="705731935%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="705731935%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.game" id="705731935%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.pvp.model.game/index.html">io.github.kryszak.gwatlin.api.pvp.model.game</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="705731935%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="705731935%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1238,13 +1281,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="2050189593%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.rank" id="2050189593%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2050189593%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.rank" id="2050189593%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.pvp.model.rank/index.html">io.github.kryszak.gwatlin.api.pvp.model.rank</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2050189593%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2050189593%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1256,13 +1299,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-708482480%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.season" id="-708482480%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-708482480%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.season" id="-708482480%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.pvp.model.season/index.html">io.github.kryszak.gwatlin.api.pvp.model.season</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-708482480%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-708482480%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1274,13 +1317,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="53904150%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.stats" id="53904150%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="53904150%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.pvp.model.stats" id="53904150%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.pvp.model.stats/index.html">io.github.kryszak.gwatlin.api.pvp.model.stats</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="53904150%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="53904150%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1292,13 +1335,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1299494295%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.shared" id="-1299494295%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1299494295%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.shared" id="-1299494295%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.shared/index.html">io.github.kryszak.gwatlin.api.shared</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299494295%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1299494295%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1310,13 +1353,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="162364405%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.story" id="162364405%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="162364405%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.story" id="162364405%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.story/index.html">io.github.kryszak.gwatlin.api.story</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="162364405%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="162364405%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1328,13 +1371,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="114623920%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.story.model" id="114623920%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="114623920%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.story.model" id="114623920%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.story.model/index.html">io.github.kryszak.gwatlin.api.story.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="114623920%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="114623920%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1346,13 +1389,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-992067591%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.token" id="-992067591%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-992067591%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.token" id="-992067591%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.token/index.html">io.github.kryszak.gwatlin.api.token</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992067591%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992067591%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1364,13 +1407,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-1225017676%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.token.model" id="-1225017676%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-1225017676%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.token.model" id="-1225017676%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.token.model/index.html">io.github.kryszak.gwatlin.api.token.model</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1225017676%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1225017676%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1382,13 +1425,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="2138038840%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw" id="2138038840%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="2138038840%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw" id="2138038840%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw/index.html">io.github.kryszak.gwatlin.api.wvw</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138038840%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138038840%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1400,13 +1443,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-322273553%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.ability" id="-322273553%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-322273553%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.ability" id="-322273553%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.ability/index.html">io.github.kryszak.gwatlin.api.wvw.model.ability</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-322273553%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-322273553%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1418,13 +1461,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1827259530%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.match" id="1827259530%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1827259530%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.match" id="1827259530%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.match/index.html">io.github.kryszak.gwatlin.api.wvw.model.match</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1827259530%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1827259530%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1436,13 +1479,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-949479647%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.match.overview" id="-949479647%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-949479647%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.match.overview" id="-949479647%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.match.overview/index.html">io.github.kryszak.gwatlin.api.wvw.model.match.overview</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-949479647%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-949479647%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1454,13 +1497,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-986992258%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.objective" id="-986992258%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-986992258%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.objective" id="-986992258%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/index.html">io.github.kryszak.gwatlin.api.wvw.model.objective</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-986992258%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-986992258%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1472,13 +1515,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="-2058926197%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.rank" id="-2058926197%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="-2058926197%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.rank" id="-2058926197%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.rank/index.html">io.github.kryszak.gwatlin.api.wvw.model.rank</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058926197%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058926197%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1490,13 +1533,13 @@
         <div></div>
       </div>
     </div>
-<a data-name="1017002337%2FPackages%2F769193423" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.upgrade" id="1017002337%2FPackages%2F769193423" data-filterable-set=":dokkaHtml/main"></a>
-    <div class="table-row" data-filterable-current=":dokkaHtml/main" data-filterable-set=":dokkaHtml/main">
+<a data-name="1017002337%2FPackages%2F-251573632" anchor-label="io.github.kryszak.gwatlin.api.wvw.model.upgrade" id="1017002337%2FPackages%2F-251573632" data-filterable-set=":/main"></a>
+    <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
               <div><a href="gwatlin/io.github.kryszak.gwatlin.api.wvw.model.upgrade/index.html">io.github.kryszak.gwatlin.api.wvw.model.upgrade</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1017002337%2FPackages%2F769193423"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1017002337%2FPackages%2F-251573632"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
           <div class="pull-right">
@@ -1510,11 +1553,16 @@
     </div>
   </div>
 </div>
-      <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
-                class="pull-right"><span>Generated by </span><a
-                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
-      </div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
             </div>
         </div>
     </div>

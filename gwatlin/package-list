@@ -2305,7 +2305,7 @@ $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.match/WvwMatchWorldCount
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.match/WvwMatchWorldCount/red/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.match/-wvw-match-world-count/red.html
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective////PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/index.html
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective///PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/index.html
-$dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective/WvwObjective/#kotlin.String#kotlin.collections.List[kotlin.Double]#kotlin.String#kotlin.collections.List[kotlin.Double]#kotlin.Int#kotlin.String#kotlin.String#kotlin.String#kotlin.Int#kotlin.String#kotlin.Int/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/-wvw-objective.html
+$dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective/WvwObjective/#kotlin.String#kotlin.collections.List[kotlin.Double]#kotlin.String#kotlin.collections.List[kotlin.Double]#kotlin.Int#kotlin.String#kotlin.String?#kotlin.String#kotlin.Int#kotlin.String#kotlin.Int?/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/-wvw-objective.html
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective/chatLink/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/chat-link.html
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective/coord/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/coord.html
 $dokka.location:io.github.kryszak.gwatlin.api.wvw.model.objective/WvwObjective/id/#/PointingToDeclaration/gwatlin/io.github.kryszak.gwatlin.api.wvw.model.objective/-wvw-objective/id.html
@@ -2449,4 +2449,3 @@ io.github.kryszak.gwatlin.api.wvw.model.match.overview
 io.github.kryszak.gwatlin.api.wvw.model.objective
 io.github.kryszak.gwatlin.api.wvw.model.rank
 io.github.kryszak.gwatlin.api.wvw.model.upgrade
-
